@@ -3,6 +3,8 @@
 # usage:
 # $ ./corenlp.sh path/to/filelist path/to/outputdir
 
+echo "$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
 filelist=$1
 outputdir=$2
 
