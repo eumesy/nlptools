@@ -7,6 +7,8 @@ import os
 def main():
     with open(args.path_to_src, 'r') as fi:
         for i,l in enumerate(fi):
+            if l == '\n':
+                continue
             with open(os.path.join(args.path_to_output_dir, '{}.txt'.format(i)), 'w') as fo:
                 s1, s2 = l.rstrip().split('\t')
                 fo.write(s1 + '\n')
